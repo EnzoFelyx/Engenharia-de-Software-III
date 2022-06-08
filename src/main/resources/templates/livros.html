@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View Livros</title>
+</head>
+<body>
+<h1> Lista de Livros emprestados do aluno</h1>
+<hr>
+<table>
+    <tread>
+    <tr>
+        <th>Nome</th>
+        <th>Autor</th>
+        <th>Preço</th>
+        <th>Código</th>
+    </tr>
+    </tread>
+    <tbody>
+    <tr th:each="livraria:${livros}">
+        <td th:text="${livraria.nome}">Nome</td>
+        <td th:text="${livraria.autor}">Autor</td>
+        <td th:text="${livraria.preco}">Preço</td>
+        <td th:text="${livraria.codigo}">Código</td>
+
+    </tr>
+
+    </tbody>
+</table>
+</body>
+</html>
